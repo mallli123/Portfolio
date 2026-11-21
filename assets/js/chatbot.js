@@ -13,6 +13,8 @@
 		location: 'Madhapur, Hyderabad',
 		relocation: 'Yes, I am open to relocating to any city.',
 		notice: '60 days',
+		salary: 'My expected salary is negotiable and based on the role and responsibilities. I am happy to discuss it once I know more about the position.',
+		resumeUrl: 'assets/resume/Mallikarjuna_Reddy_Resume.pdf',
 		hours: '10:00 AM to 8:00 PM',
 		experience: '3 years of experience in data analysis, MIS reporting and automation.',
 		education: 'B.Tech from Vel Tech University (2022).',
@@ -64,6 +66,19 @@
 			answer: function () { return PROFILE.relocation; }
 		},
 		{
+			id: 'salary', chip: 'Expected salary',
+			words: ['salary', 'ctc', 'package', 'expected', 'lpa', 'compensation', 'current pay', 'hike', 'negotiable', 'negotiation', 'pay scale'],
+			answer: function () { return PROFILE.salary; }
+		},
+		{
+			id: 'resume', chip: 'Download resume',
+			words: ['resume', 'cv', 'curriculum vitae', 'download', 'profile pdf'],
+			answer: function () {
+				return 'You can download my resume here:<br><a class="cb-dl" href="' + PROFILE.resumeUrl +
+					'" download="Mallikarjuna_Reddy_Resume.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download resume (PDF)</a>';
+			}
+		},
+		{
 			id: 'experience', chip: 'Experience',
 			words: ['experience', 'years', 'how long', 'background', 'about you', 'yourself', 'introduce'],
 			answer: function () { return PROFILE.experience + ' I work with SQL, Power BI, Excel and Python.'; }
@@ -105,7 +120,6 @@
 
 	var GREETING = ['hi', 'hello', 'hey', 'hii', 'namaste', 'good morning', 'good afternoon', 'good evening'];
 	var THANKS = ['thank', 'thanks', 'thx', 'great', 'ok thanks'];
-	var PRIVATE = ['salary', 'ctc', 'package', 'expected', 'lpa', 'compensation', 'current pay', 'hike', 'negotiat'];
 
 	function norm(s) { return ' ' + s.toLowerCase().replace(/[^a-z0-9.+ ]/g, ' ').replace(/\s+/g, ' ').trim() + ' '; }
 
@@ -127,11 +141,6 @@
 		});
 		scored.sort(function (a, b) { return b.score - a.score || a.idx - b.idx; });
 
-		var asksPrivate = PRIVATE.some(function (w) { return has(t, w); });
-		if (asksPrivate) {
-			out.push('I prefer to discuss salary details directly. Please email me at ' +
-				A('mailto:' + PROFILE.email, PROFILE.email) + ' and I will reply.');
-		}
 		scored.slice(0, 3).forEach(function (s) { out.push(s.topic.answer()); });
 
 		if (!out.length) {

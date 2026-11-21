@@ -52,6 +52,10 @@
 .cb-bot ul { margin: 6px 0 0; padding-left: 18px; }
 .cb-bot li { margin: 3px 0; }
 .cb-bot b { color: #fff; }
+.cb-bot a.cb-dl {
+	display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; padding: 9px 14px; border-radius: 10px;
+	text-decoration: none; font-weight: 700; color: #04101f; background: linear-gradient(135deg, #5eb0ff, #2dd4bf);
+}
 
 .cb-typing { display: flex; gap: 5px; padding: 14px 16px; }
 .cb-typing i { width: 7px; height: 7px; border-radius: 50%; background: #9aa7c7; animation: cb-bounce 1s infinite ease-in-out; }
