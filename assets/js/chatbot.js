@@ -13,7 +13,7 @@
 		location: 'Madhapur, Hyderabad',
 		relocation: 'Yes, I am open to relocating to any city.',
 		notice: '60 days',
-		salary: 'My expected salary is negotiable and based on the role and responsibilities. I am happy to discuss it once I know more about the position.',
+		salary: 'My expected salary is 7 LPA. It is negotiable depending on the role, responsibilities and overall benefits. I am happy to discuss it once I know more about the position.',
 		resumeUrl: 'assets/resume/Mallikarjuna_Reddy_Resume.pdf',
 		hours: '10:00 AM to 8:00 PM',
 		experience: '3 years of experience in data analysis, MIS reporting and automation.',
