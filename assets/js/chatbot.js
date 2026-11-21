@@ -6,7 +6,7 @@
 
 	/* ============ EDIT YOUR DETAILS HERE ============ */
 	var PROFILE = {
-		name: 'Mallikarjuna',
+		name: 'Mallikarjuna Reddy Perla',
 		role: 'MIS Analyst',
 		company: 'Mangatrai Jewellers',
 		since: 'Sep 2026',
